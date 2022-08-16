@@ -10,58 +10,91 @@
 </head>
 <body>
     <header>
-        <svg class="logo"><image href="./assets/logo.svg"></image></svg>
-        <ul>
-            <li>HOMEM</li>
-            <li>MULHER</li>
-            <li>CRIANÇA</li>
-            <li>CUSTOMIZAR</li>
-        </ul>
+
+        <svg class="logo">
+            <image href="./assets/logo.svg"></image>
+        </svg>
+
+        <nav>
+            <ul>
+                <li>Homem</li>
+                <li>Mulher</li>
+                <li>Criança</li>
+                <li>Customizar</li>
+            </ul>
+        </nav>
+
         <label for="search">
-            <svg>
-                <image href="./assets/icon-search.svg" id="search"></image>
+            <svg class="small">
+                <image href="./assets/icon-search.svg"></image>
             </svg>
-            <input type="text" placeholder="Pesquisar">
+            <input type="text" name="pesquisar" id="search" placeholder="Pesquisar">
         </label>
-        <svg class="bag"><image href="./assets/icon-bag.svg"></image></svg>
+
+        <svg class="medium">
+            <image href="./assets/icon-bag.svg"></image>
+        </svg>
+
     </header>
+
     <main>
-        <div class="column">
-            <div class="desc">
+
+        <div class="column1">
+
+            <div class="contentcol1">
+                
                 <h1>
-                    Tênis<br>Esportivo<br>Para Corrida<br>Top
+                    Tênis<br>esportivo<br>para corrida<br>top
                 </h1>
-                <p>
-                    Esse tênis tem o intuito de te deixar ainda<br>mais fitness, focado, e musculoso.
-                </p>
+                
+                <p>Esse tênis tem o intuito de te deixar ainda mais<br>fitness, focado, e musculoso.</p>
+                
                 <h2 class="pricetag">
                     R$ 1.000,00
                 </h2>
-                <div class="containerbutton">
-                    <button>COMPRAR</button>
+
+                <button>Comprar</button>
+
+            </div>
+
+        </div>
+
+        <div class="column2">
+
+            <div class="contentcol2">
+                
+                <img src="./assets/tenis-1-ampliado.png" alt="Tenis">
+                
+                <div class="gallery">
+                
+                    <img src="./assets/tenis-2-galeria.png" alt="Tenis">
+                
+                    <img src="./assets/tenis-1-galeria.png" alt="Tenis">
+                
+                    <img src="./assets/tenis-3-galeria.png" alt="Tenis">
+                
                 </div>
+
             </div>
+
         </div>
-        <div class="image">
-            <img src="./assets/tenis-1-ampliado.png" alt="Tenis">
-            <div class="galeria">
-                <img src="./assets/tenis-1-galeria.png" alt="Tenis galeria"><img src="./assets/tenis-2-galeria.png" alt="Tenis galeria 2"><img src="./assets/tenis-3-galeria.png" alt="Tenis galeria 3">
-            </div>
-        </div>
+
     </main>
+
     <footer>
-        <img src="./assets/img-video.png" alt="video demonstração">
+        
+        <img src="./assets/img-video.png" alt="video de demonstração">
+
         <ul>
-            <li>FACEBOOK</li>
-            <li>INSTAGRAM</li>
-            <li>YOUTUBE</li>
-            <li>TWITTER</li>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Youtube</li>
+            <li>Twitter</li>
         </ul>
-        <a href="#">
-            <div class="container">
-                <h2>Explore mais <svg><image href="./assets/icon-arrow.svg"></image></svg></h2>
-            </div>
-        </a>
+
+        <button>Explore mais <svg><image href="./assets/icon-arrow.svg"></image></svg></button>
+
     </footer>
+
 </body>
 </html>

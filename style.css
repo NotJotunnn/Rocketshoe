@@ -1,4 +1,4 @@
-/* GLOBAIS */
+/* GLOBALS */
 
 :root {
     --button: #FF0000;
@@ -11,195 +11,234 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-body {
-    width: 1080px;
-    height: 100vh;
-}
-
+/* Taking out default values of padding and margin */
 * {
-    padding: 0px;
-    margin: 0px;
-    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
-a {
-    text-decoration: none;
-}
-
-svg {
-    /* border: 5px solid red; */
-    width: 23px;
-    height: 23px;
-}
-
-ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-li {
-    text-transform: uppercase;
+/* Stopping the page from having the side scroll */
+body, html {
+    overflow-x: hidden;
 }
 
 /* Header */
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+/* Used for SVGs */
 
-header > ul {
-    width: 650px;
-    font-weight: bold;
-}
-
-svg.logo {
+.logo {
     width: 52px;
     height: 37px;
 }
 
-svg.bag {
-    width: 35px;
-    height: 35px;
+.small {
+    width: 25px;
+    height: 25px;
 }
 
-header input {
-    border: none;
+.medium {
+    width: 34px;
+    height: 34px;
+    scale: 70%;
 }
+
+/* Search field */
 
 label[for="search"] {
     border: 2px solid lightgrey;
+    border-radius: 4px;
     display: flex;
     align-items: center;
+    padding: 4px;
+    background-color: white;
+}
+
+label[for="search"] input {
+    border: none;
+    outline: none;
+    position: relative;
+    width: 100px;
+}
+
+label[for="search"] svg {
+    rotate: 10deg;
+    scale: 80%;
+    position: relative;
+    right: 2px;
+}
+
+/* Navigation menu */
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
     justify-content: space-between;
-    width: 170px;
-    height: 35px;
+    /* border: 2px solid red; */
 }
 
-/* Main */
-
-main {
-    height: 800px;
-    display: grid;
-    grid-template-areas: 'a b';
-    grid-template-columns: 1fr 75%;
-    height: fit-content; /* Beware when changing padding */
-    background-color: var(--background);
+li {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1.5vmin;
 }
 
-.column {
+nav {
+    width: 50%;
+}
+
+header {
     display: flex;
+    /* border: 2px solid red; */
+    height: 5vh;
+    width: 100vw;
+    justify-content: space-around;
     align-items: center;
+    position: relative;
+    top: 12px;
+    z-index: 2;
 }
 
-main > .column > .desc {
+/* Main content */
+
+/* Separated in columns to better organize both contents */
+
+/* First column */
+
+.column1 {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    background-color: var(--background);
-    height: 400px;
-    /* border: 2px solid red; */
+    justify-items: center;
+    width: 30vw;
+    height: 100%;
+    /* border: 4px solid red; */
 }
 
-main > .image > img {
-    /* position: relative;
-    left: 110px; */
-    width: 597px;
-    height: 510.82px;
-    border: none;
-    /* border: 2px solid red; */
+.contentcol1 {
+    margin-left: 30px;
+    width: 100%;
+    height: 100%;
 }
 
-main > .image > .galeria > img {
-    border: none;
+.column1 h1 {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-size: 47px;
+    margin-top: 30%;
 }
 
-main > .image > .galeria > img:hover {
-    border-bottom: 4px solid var(--button);
-}
-
-/* main > .image {
-    border: 2px solid red;
-} */
-
-main .galeria img:nth-of-type(1) {
-    width: 269.51px;
-    height: 182.8px;
-}
-
-main .galeria img:nth-of-type(2) {
-    width: 250px;
-    height: 187.88px;
-}
-
-main .galeria img:nth-of-type(3) {
-    width: 270px;
-    height: 182.8px;
-}
-
-main > .image {
-    background-color: var(--main-background);
-    justify-content: center;
-    display: grid;
-    grid-template-areas: 'a' 'b';
-    grid-template-rows: 1fr 40%;
-}
-
-main p {
-    font-size: 13px;
-}
-
-/* .containerbutton {
-    background-color: red;
-} */
-
-button {
-    background-color: var(--button);
-    color: var(--background);
-    padding: 20px 45px;
-    font-weight: bold;
-    border: none;
-}
-
-.desc p {
+.column1 p {
+    margin-bottom: 30px;
     color: var(--text-description);
 }
 
-.desc h1 {
-    font-size: 40px;
+.pricetag {
+    margin-bottom: 20px;
+}
+
+.column1 button {
+    width: 145px;
+    height: 50px;
+    text-transform: uppercase;
+    border: none;
+    background-color: var(--button);
+    color: var(--background);
+}
+
+/* Second column */
+
+.column2 {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    background-color: var(--main-background);
+}
+
+.contentcol2 {
+    width: 80%;
+    margin-left: 75px;
+}
+
+/* Image on top of the gallery */
+.contentcol2 > img {
+    width: 597px;
+    height: 510px;
+    margin-top: 140px;
+    /* border: 2px solid red; */
+}
+
+/* Gallery images */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    width: 630px;
+    /* border: 2px solid red; */
+}
+
+/* Hover to add better interaction */
+.gallery img:hover {
+    border-bottom: 2px solid var(--button);
+}
+
+.gallery img:nth-of-type(1) {
+    /* scale: 10%; */
+    width: 269.51px;
+    height: 182.8px;
+    /* border: 2px solid red; */
+}
+
+.gallery img:nth-of-type(2) {
+    /* scale: 10%; */
+    width: 250px;
+    height: 182.8px;
+    /* border: 2px solid red; */
+}
+
+.gallery img:nth-of-type(3) {
+    /* scale: 10%; */
+    width: 270px;
+    height: 182.8150px;
+    /* border: 2px solid red; */
+}
+
+main {
+    display: flex;
+    height: 70vh;
+    /* border: 2px solid red; */
+    position: relative;
+    bottom: 67px;
+    z-index: 1;
 }
 
 /* Footer */
 
 footer {
-    height: 166.33px;
     display: flex;
-    justify-content: space-between;
-    width: 1080px;
-    /* border: 2px solid red; */
-    background-color: var(--background);
+    border: 2px solid red;
 }
 
 footer ul {
-    display: flex;
+    width: 650px;
+    height: 150px;
     justify-content: space-around;
-    width: 600px;
-    font-size: 13px;
-}
-
-footer .container {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    bottom: 2px;
-    /* border: 2px solid red; */
-    height: 166.33px;
-    background-color: var(--footer);
-    color: var(--background);
-    width: 330px;
 }
 
+footer > button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 25%;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    justify-content: center;
+    background-color: var(--footer);
+    border: none;
+}
+
+button > svg {
+    width: 23px;
+    height: 23px;
+    /* border: 2px solid red; */
+}
